@@ -4,9 +4,9 @@
 
 // External
 // @import "vendor/jquery.fancybox.css";
-// @import "node_modules/swiper/swiper.scss";
-// @import "node_modules/swiper/components/pagination/pagination.scss";
-// @import "node_modules/swiper/components/navigation/navigation.scss";
+@import "node_modules/swiper/swiper.scss";
+@import "node_modules/swiper/components/pagination/pagination.scss";
+@import "node_modules/swiper/components/navigation/navigation.scss";
 
 // Base
 @import "grid";
@@ -29,4 +29,46 @@
 @import "components/base/menu-toggler";
 @import "components/base/rte";
 
+
 // Project components
+
+.section__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    span {
+        color: $color-secondary;
+    }
+}
+
+.section__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+
+    span {
+        color: $color-secondary;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 24px;
+    }
+}
+
+@import "blocks/intro";
+@import "blocks/how-work";
+@import "blocks/schema";
+@import "blocks/why";
+@import "blocks/test";
+@import "blocks/earnings";
+@import "blocks/extra";
+@import "blocks/statistics";
+@import "blocks/reviews";
+@import "blocks/pre-footer";

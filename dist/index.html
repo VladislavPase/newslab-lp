@@ -25,112 +25,299 @@
     <meta property="og:description" content="description">
     <meta property="twitter:description" content="description">
     <meta property="og:image" content="assets/share.png">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
   </head>
-  <body class="body dev">
+  <body class="body">
     <header class="header">
-      <div class="header__inner">header</div>
+      <div class="header__inner">
+        <div class="header__burger"><span></span><span></span></div><a class="header__logo logo" href="/"><img src="assets/img/logo.svg" alt=""></a>
+        <nav class="header__nav"><a class="header__logo logo" href="/"><img src="assets/img/logo-light.svg" alt=""></a>
+          <ul class="header__nav--list">
+            <li class="header__nav--item"><a class="header__nav--link link header__link" href="" data-scroll="#how">Как это работает?</a></li>
+            <li class="header__nav--item"><a class="header__nav--link link header__link" href="" data-scroll="#why">Почему мы</a></li>
+            <li class="header__nav--item"><a class="header__nav--link link header__link" href="" data-scroll="#income">Ваш доход</a></li>
+            <li class="header__nav--item"><a class="header__nav--link link header__link" href="" data-scroll="#statisctic">Статистика</a></li>
+            <li class="header__nav--item"><a class="header__nav--link link header__link" href="" data-scroll="#reviews">Отзывы</a></li>
+          </ul>
+          <div class="header__actions"><a class="header__link link header__actions--link" href="">Вход</a><a class="header__btn btn _secondary" href="">Регистрация</a></div>
+        </nav>
+        <div class="header__enter"> <img src="assets/img/icons/exit.svg" alt=""></div>
+      </div>
     </header>
     <div class="content">
-      <div class="container">
-        <div class="block">
-          <pre>.block</pre>
-        </div>
-        <div class="block _mb-none">
-          <pre>.block._mb-none</pre>
-        </div>
-        <div class="block _white _mb-small">
-          <pre>.block._white._mb-small</pre>
-        </div>
-        <div class="block"><span class="text-muted">.text-muted</span><span class="text-nowrap">.text-nowrap</span><span class="text-uppercase">.text-uppercase</span><span class="color-primary">.color-primary</span><span class="color-secondary">.color-secondary</span><a href="#">a</a><span class="link">span.link</span></div>
-        <div class="block dev-flex">
-          <button class="btn">.btn </button>
-          <button class="btn" disabled>.btn(disabled)</button>
-          <button class="btn _primary">.btn._primary</button>
-          <button class="btn _primary" disabled>.btn._primary(disabled)</button>
-          <button class="btn _secondary">.btn._secondary</button>
-          <button class="btn _secondary" disabled>.btn._secondary(disabled)</button>
-        </div>
-        <div class="block">
-          <form class="form">
-            <div class="form__item">
-              <div class="input js-label">
-                <input>
-                <label>.input.js-label input</label>
-              </div>
+      <section class="intro" id="intro">
+        <div class="container">
+          <picture class="intro__bg">
+            <source media="(min-width: 1280px)" srcset="assets/img/bg.webp" type="image/webp">
+            <source media="(min-width: 1280px)" srcset="assets/img/bg.png" type="image/png">
+            <source srcset="assets/img/bg-sm.webp" type="image/webp">
+            <source srcset="assets/img/bg-sm.png" type="image/png"><img src="assets/img/bg-sm.png" alt="">
+          </picture>
+          <h1 class="intro__title text-uppercase">NewsLab — витрина<br>с  обучаемыми алгоритмами ротации тизеров</h1>
+          <ul class="intro__list">
+            <li class="intro__list--item">
+              <div class="icon"><img src="assets/img/icons/circle.svg" alt=""></div>
+              <h4 class="intro__list--title">Запускай трафик на выбранную новость</h4>
+              <p class="intro__list--text">витрина сама подберет лучшие офферы для твоей аудитории</p>
+            </li>
+            <li class="intro__list--item">
+              <div class="icon"><img src="assets/img/icons/cube.svg" alt=""></div>
+              <h4 class="intro__list--title">Увеличивай доход существующих кампаний</h4>
+              <p class="intro__list--text">скрипт с витриной тизеров добавит в среднем +17% профита</p>
+            </li>
+            <li class="intro__list--item">
+              <div class="icon"><img src="assets/img/icons/star.svg" alt=""></div>
+              <h4 class="intro__list--title">Не парься с настройками</h4>
+              <p class="intro__list--text">удобная админка с интуитивно понятным интерфейсом к твоим услугам. Проверяй</p>
+            </li>
+          </ul>
+          <div class="intro__bottom"><a class="intro__btn btn _primary" href="">Получить доступ</a>
+            <div class="intro__bottom--text">
+              <div class="intro__bottom--arrow icon"><img src="assets/img/icons/arrow.svg" alt=""></div>
+              <p>Работа с NewsLab перенесет вас в атмосферу ламповых времен зеленого кофе - когда лить было проще, а банов было меньше. </p>
             </div>
-            <div class="form__item">
-              <div class="input _error js-label">
-                <input required>
-                <label>.input._error.js-label input(required)</label>
-              </div>
-            </div>
-            <div class="form__item">
-              <div class="input js-label">
-                <input disabled>
-                <label>.input.js-label input(disabled)</label>
-              </div>
-            </div>
-            <div class="form__item">
-              <div class="input js-label">
-                <input class="js-mask__tel" type="tel">
-                <label>.input.js-label input.js-mask__tel(type="tel")</label>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
-        <div class="block">
-          <pre>.bk</pre>
-          <p class="bk"><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item">span.bk__item</span></p>
+      </section>
+      <section class="how-work" id="how">
+        <div class="container">
+          <h2 class="section__title text-uppercase">Как работает система</h2>
+          <div class="how-work__cards">
+            <div class="how-work__card">
+              <h3 class="how-work__card--title text-uppercase">Со стороны вебмастера</h3>
+              <ul class="how-work__card--list">
+                <li class="how-work__card--list_item">
+                  <p class="how-work__card--list_num">01</p>
+                  <p class="how-work__card--list_text">Выбираешь статью и запускаешь трафик</p>
+                </li>
+                <li class="how-work__card--list_item">
+                  <p class="how-work__card--list_num">02</p>
+                  <p class="how-work__card--list_text">Следишь за статой, особенно за EPC</p>
+                </li>
+                <li class="how-work__card--list_item">
+                  <p class="how-work__card--list_num">03</p>
+                  <p class="how-work__card--list_text">Масштабируешь связки</p>
+                </li>
+              </ul>
+              <picture class="how-work__card--image">
+                <source srcset="assets/img/how-work__image1.webp" type="image/webp">
+                <source srcset="assets/img/how-work__image1.png" type="image/png"><img src="assets/img/how-work__image1.png" alt="">
+              </picture>
+            </div>
+            <div class="how-work__card">
+              <h3 class="how-work__card--title text-uppercase">Со стороны клиента</h3>
+              <ul class="how-work__card--list">
+                <li class="how-work__card--list_item">
+                  <p class="how-work__card--list_num">01</p>
+                  <p class="how-work__card--list_text">Клиент заходит на новость</p>
+                </li>
+                <li class="how-work__card--list_item">
+                  <p class="how-work__card--list_num">02</p>
+                  <p class="how-work__card--list_text">Видит релевантные для него тизеры</p>
+                </li>
+                <li class="how-work__card--list_item">
+                  <p class="how-work__card--list_num">03</p>
+                  <p class="how-work__card--list_text">Переходит по тизеру и делает заказ</p>
+                </li>
+              </ul>
+              <picture class="how-work__card--image">
+                <source srcset="assets/img/how-work__image2.webp" type="image/webp">
+                <source srcset="assets/img/how-work__image2.png" type="image/png"><img src="assets/img/how-work__image2.png" alt="">
+              </picture>
+            </div>
+          </div>
         </div>
-        <div class="block">
-          <pre>div.rte</pre>
-          <div class="rte">
-            <h3>Title H3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas iaculis nisl, in fermentum urna scelerisque nec. Mauris enim erat, bibendum sed condimentum at, ultrices non arcu. Morbi eu sem porttitor, vulputate justo ut, fringilla turpis. Donec in elementum nunc. Cras maximus faucibus dictum. Duis sodales lacus ut eros sollicitudin tristique. Duis vitae tincidunt sem, eget ullamcorper turpis. Maecenas tristique eget leo sed sodales.</p>
-            <ul>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
+      </section>
+      <section class="schema">
+        <div class="container">
+          <h2 class="section__title schema__title text-uppercase">Полностью прозрачная схема работы</h2>
+          <ul class="schema__list">
+            <li class="schema__list--item">
+              <p class="schema__list--num">01</p>
+              <p class="schema__list--text">Мы пишем <strong>свежий контент </strong>и упаковываем его кликабельной рекламой</p>
+            </li>
+            <li class="schema__list--item">
+              <p class="schema__list--num">02</p>
+              <p class="schema__list--text">Ты заходишь в <strong>удобный кабинет-лабораторию </strong>и выбираешь новость</p>
+            </li>
+            <li class="schema__list--item">
+              <p class="schema__list--num">03</p>
+              <p class="schema__list--text">Создаешь поток и <strong>запускаешь</strong>на него свой <strong>трафик</strong></p>
+            </li>
+            <li class="schema__list--item">
+              <p class="schema__list--num">04</p>
+              <p class="schema__list--text">Пользуясь гибкой системой вывода статистики <strong>масштабируешь связки</strong></p>
+            </li>
+            <li class="schema__list--item">
+              <p class="schema__list--num">05</p>
+              <p class="schema__list--text">Медитируешь глядя как в дашборде <strong>растет твоя сумма к выплате</strong></p>
+            </li>
+            <li class="schema__list--item"><img class="schema__list--arrow" src="assets/img/icons/arrow-white.svg" alt="">
+              <picture class="schema__list--image">
+                <source srcset="assets/img/label.webp" type="image/webp">
+                <source srcset="assets/img/label.png" type="image/png"><img src="assets/img/label.png" alt="">
+              </picture>
+            </li>
+          </ul>
+          <picture class="schema__image">
+            <source srcset="assets/img/admin__image.webp" type="image/webp">
+            <source srcset="assets/img/admin__image.png" type="image/png"><img src="assets/img/admin__image.png" alt="">
+          </picture>
+        </div>
+      </section>
+      <section class="why" id="why">
+        <div class="container">
+          <h2 class="section__title text-uppercase">Почему мы?</h2>
+          <ul class="why__list">
+            <li class="why__item"> 
+              <div class="why__icon"><img src="assets/img/icons/star2.svg" alt=""></div>
+              <p class="why__text">NewsLab ежедневно наполняется свежими новостями и инфоповодами</p>
+            </li>
+            <li class="why__item">
+              <div class="why__icon"><img src="assets/img/icons/cube.svg" alt=""></div>
+              <p class="why__text">Витрина содержит офферы топовых партнерских программ в вертикалях нутра и физ товарка</p>
+            </li>
+            <li class="why__item">
+              <div class="why__icon"><img src="assets/img/icons/circle.svg" alt=""></div>
+              <p class="why__text">Благодаря договоренностям с партнерскими программами у нас высокие ставки, которые сложно получить самостоятельно</p>
+            </li>
+            <li class="why__item">
+              <div class="why__icon"><img src="assets/img/icons/triangle.svg" alt=""></div>
+              <p class="why__text">Связки на новостной витрине тестируются отделом медиабаинга, поэтому мы уверены в их качестве</p>
+            </li>
+          </ul>
+          <picture class="why__image">
+            <source media="(min-width: 1280px)" srcset="assets/img/why__image.webp" type="image/webp">
+            <source media="(min-width: 1280px)" srcset="assets/img/why__image.png" type="image/png">
+            <source srcset="assets/img/why__image-sm.webp" type="image/webp">
+            <source srcset="assets/img/why__image-sm.png" type="image/png"><img src="assets/img/why__image-sm.png" alt="">
+          </picture>
+        </div>
+      </section>
+      <section class="test">
+        <div class="container">
+          <h2 class="section__title test__title text-uppercase"><span>Затестить стоит </span>в любом случае, а то потом придется <span>завидовать чужим кейсам</span></h2><a class="btn _primary test__button" href="">Зарегистрироваться</a>
+        </div>
+      </section>
+      <section class="earnings" id="income">
+        <div class="container">
+          <h2 class="section__title text-uppercase">Сколько можно заработать?</h2>
+          <div class="earnings__cards">
+            <div class="earnings__card click"><span class="earnings__card--num">1</span>
+              <div class="earnings__card--icon"><img src="assets/img/icons/arrow2.svg" alt=""></div><span class="earnings__card--text">уникальный клик по твоему объявлению</span>
+              <div class="earnings__card--arrow"><img src="assets/img/icons/arrow.svg" alt=""></div>
+            </div>
+            <div class="earnings__card sum"><span class="earnings__card--text">может принести до</span><span class="earnings__card--num">4<span class="curr">₽</span></span></div>
+          </div>
+          <p class="earnings__bottom">Если есть вопросы по поводу источников — смело <a class="link" href="">задавай своему менеджеру</a></p>
+        </div>
+      </section>
+      <section class="extra">
+        <div class="container">
+          <h2 class="section__title extra__title text-uppercase">Дополнительный заработок</h2>
+          <div class="extra__info">
+            <div class="textbox">
+              <h3 class="section__subtitle">Пока раздумываешь над новостным трафиком — можешь протестировать <span>наш механизм домонетизации</span></h3>
+              <div class="extra__info--profit">
+                <p class="extra__text">Для этого достаточно у нас в кабинете вебмастера взять скрипт, который будет дожимать твою аудиторию и получишь</p>
+                <div class="extra__info--percent"><span>до</span><span class="value">+17%</span><span>к твоему профиту</span></div>
+                <div class="extra__text _arrow"><span>Можешь и больше - покажи нам свой успешный кейс и мы обновим указанный здесь максимум</span><img class="extra__arrow" src="assets/img/icons/arrow.svg" alt=""></div>
+              </div><a class="extra__button btn _primary" href="">Подробнее </a>
+            </div>
+            <div class="extra__info--image">
+              <picture class="extra__info--image_lg">
+                <source srcset="assets/img/extra__image.webp" type="image/webp">
+                <source srcset="assets/img/extra__image.png" type="image/png"><img src="assets/img/extra__image.png" alt="">
+              </picture>
+              <picture class="extra__info--image_sm">
+                <source srcset="assets/img/extra__image2.webp" type="image/webp">
+                <source srcset="assets/img/extra__image2.png" type="image/png"><img src="assets/img/extra__image2.png" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="statistics" id="statisctic">
+        <div class="container">
+          <div class="statistics__title-wrapper">
+            <h2 class="section__title text-uppercase statistics__title">Статистика</h2>
+            <ul class="statistics__list">
+              <p>Всегда акуальная статистика с быстрым обновлением:</p>
+              <li>по push: раз в 10 минут</li>
+              <li>лиды - раз в 5 минут</li>
+              <li>визиты - realtime</li>
             </ul>
-            <p>Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.</p>
-            <ol>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ol>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
+          </div>
+          <div class="statistics__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide statistics__slider--item"><span class="value">10000+</span><span class="text">актуальных и самых обсуждаемых новостей <br>находится на смарт‑витрине</span></div>
+              <div class="swiper-slide statistics__slider--item"><span class="value">1000+</span><span class="text">вебмастеров сейчас льет<br>на NewsLab</span></div>
+              <div class="swiper-slide statistics__slider--item"><span class="value">90%</span><span class="text">отчислений вы получаете, когда <br>пользователь делает заказ</span></div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-4 col-lg-6">
-            <div class="dev-col">.col-sm-12.col-md-4.col-lg-6</div>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-3">
-            <div class="dev-col">.col-sm-12.col-md-4.col-lg-3</div>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-3">
-            <div class="dev-col">.col-sm-12.col-md-4.col-lg-3</div>
+      </section>
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="section__title reviews__title text-uppercase">Отзывы</h2>
+          <div class="reviews__slider">
+            <h4 class="reviews__slider--title">Что о нас говорят наши партнеры</h4>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide reviews__slider--item"><img class="reviews__slider--image" src="assets/img/logo.svg" alt="">
+                <p class="reviews__slider--text">Сотрудничаем с NewsLab больше полугода и не планируем останавливаться! Найти команду с таким уровнем профессионализма сложно. В рамках любого обращения — быстро и конструктивно приходим к решению. Ребята всегда предоставляют трафик отличного качества с высоким апрувом и открыты к диалогу дабы найти самые выгодные условия для всех сторон.</p>
+              </div>
+              <div class="swiper-slide reviews__slider--item"><img class="reviews__slider--image" src="assets/img/logo.svg" alt="">
+                <p class="reviews__slider--text">Сотрудничаем с NewsLab больше полугода и не планируем останавливаться! Найти команду с таким уровнем профессионализма сложно. В рамках любого обращения — быстро и конструктивно приходим к решению. Ребята всегда предоставляют трафик отличного качества с высоким апрувом и открыты к диалогу дабы найти самые выгодные условия для всех сторон.</p>
+              </div>
+              <div class="swiper-slide reviews__slider--item"><img class="reviews__slider--image" src="assets/img/logo.svg" alt="">
+                <p class="reviews__slider--text">Сотрудничаем с NewsLab больше полугода и не планируем останавливаться! Найти команду с таким уровнем профессионализма сложно. В рамках любого обращения — быстро и конструктивно приходим к решению. Ребята всегда предоставляют трафик отличного качества с высоким апрувом и открыты к диалогу дабы найти самые выгодные условия для всех сторон.</p>
+              </div>
+            </div>
+            <div class="prev"><i class="icon-link-arrow"></i></div>
+            <div class="next"><i class="icon-link-arrow"></i></div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
-        <!--ul.dev-menu
-        li.dev-menu__item
-            a(href="main.html") Главная
-        li.dev-menu__item
-            span.link.js-popup(data-href="#login") Авторизация
-        li.dev-menu__item
-            span.link.js-popup(data-href="#register") Регистрация
-        -->
-      </div>
+      </section>
+      <section class="pre-footer">
+        <div class="container"><img class="pre-footer__image" src="assets/img/logo-lg.svg" alt="">
+          <div class="pre-footer__content"><img class="pre-footer__logo" src="assets/img/prefooter__logo.svg" alt="">
+            <p class="pre-footer__text text-uppercase">Ты лей, а мы разберемся</p><a class="btn _primary pre-footer__button" href="">Зарегистрироваться</a>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
-      <div class="container">footer</div>
+      <div class="container">
+        <div class="footer__top">
+          <nav class="footer__nav">
+            <ul class="footer__nav--list">
+              <li class="footer__nav--item"><a class="footer__nav--link link" href="" data-scroll="#intro">О нас</a></li>
+              <li class="footer__nav--item"><a class="footer__nav--link link" href="">FAQ</a></li>
+            </ul>
+            <ul class="footer__nav--list">
+              <li class="footer__nav--item"><a class="footer__nav--link link" href="" data-scroll="#how">Как это работает?</a></li>
+              <li class="footer__nav--item"><a class="footer__nav--link link" href="" data-scroll="#why">Почему мы</a></li>
+              <li class="footer__nav--item"><a class="footer__nav--link link" href="" data-scroll="#income">Ваш доход</a></li>
+              <li class="footer__nav--item"><a class="footer__nav--link link" href="" data-scroll="#statistic">Статистика</a></li>
+              <li class="footer__nav--item"><a class="footer__nav--link link" href="" data-scroll="#reviews">Отзывы</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="divider"></div>
+        <div class="footer__bottom"><a class="footer__logo" href=""><img src="assets/img/logo-light.svg" alt=""></a>
+          <div class="footer__copyright">NewsLab. <span>Все права защищены</span></div>
+          <ul class="footer__socials">
+            <li class="footer__socials--item"><a class="footer__socials--link" href=""><img src="assets/img/icon-instagram.svg" alt=""></a></li>
+            <li class="footer__socials--item"><a class="footer__socials--link" href=""><img src="assets/img/icon-facebook.svg" alt=""></a></li>
+            <li class="footer__socials--item"><a class="footer__socials--link" href=""><img src="assets/img/icon-telegram.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <div class="hidden">
       <!-- include popups here-->
     </div>
-    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
     <script>
       /* изменяемые настройки скриптов, указаны значения по умолчанию */
       var appConfig = {

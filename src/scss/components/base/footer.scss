@@ -1,4 +1,137 @@
 .footer {
     $root: &;
+    padding: 45px 0 60px;
+    background: #313130;
 
+    @include media-breakpoint-up(lg) {
+        padding: 50px 0;
+    }
+
+    &__logo {
+        @include media-breakpoint-down(md) {
+            width: 100px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__nav {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--list {
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                align-items: center;
+            }
+
+            & + & {
+                @include media-breakpoint-down(md) {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        &--item {
+            & + & {
+                @include media-breakpoint-down(md) {
+                    margin-top: 30px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    margin-left: 40px;
+                }
+            }
+        }
+
+        &--link {
+            color: $color-white;
+            transition: color .2s ease;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .divider {
+        height: 2px;
+        background: fade-out($color-white, .9);
+        margin: 40px 0;
+
+        @include media-breakpoint-up(lg) {
+            margin: 50px 0;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__copyright {
+        margin-left: 60px;
+        font-weight: 500;
+        color: $color-white;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        @include media-breakpoint-down(md) {
+            max-width: 160px;
+
+            span {
+                display: block;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            flex: 0 0 100%;
+            margin-top: 40px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-left: auto;
+        }
+
+        &--item {
+            & + & {
+                margin-left: 20px;
+            }
+        }
+
+        &--link {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            background: fade-out($color-white, .9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            transition: border-color .2s ease;
+
+            &:hover {
+                border-color: $color-primary;
+            }
+        }
+    }
 }

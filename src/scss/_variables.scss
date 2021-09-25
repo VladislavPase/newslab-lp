@@ -1,9 +1,10 @@
 /* Main Colors */
-$color-base : #171717;
+$color-base : #000;
 $color-white : #fff;
 $color-gray : #ccc;
-$color-primary : #E20210;
-$color-secondary : #0E3DB8;
+$color-primary : #E94E1B;
+$color-secondary : #6BBEA0;
+$color-text-opacity: fade-out($color-base, .3);
 
 $color-bg : #f8f8f8;
 $color-text : $color-base;
@@ -28,7 +29,7 @@ $header-height: (sm: 2rem,
 // $header-height-fixed: ;
 
 /* Fonts */
-$font-family : sans-serif;
+$font-family : 'GT Eesti Pro Display', sans-serif;
 $font-family-alt : sans-serif;
 $font-family-fontello: "fontello";
 $font-size : 1rem;
@@ -44,8 +45,8 @@ $grid-breakpoints: (sm: 320px,
 $container-max-widths: (sm: 100%,
     md: 100%,
     lg: 1170px,
-    xl: 1170px);
-$container-paddings: (sm: 25px,
+    xl: 1400px);
+$container-paddings: (sm: 15px,
     md: 50px,
     lg: 0,
     xl: 0);

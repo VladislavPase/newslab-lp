@@ -5,6 +5,7 @@ html(lang=__.lang, class="no-js")
     head
         block head
             include head
+            link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
     body.body(class=bodyClass)
         include mixins/svgsprite
         
@@ -21,7 +22,7 @@ html(lang=__.lang, class="no-js")
             // include popups here
         
         block styles
-            link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
+            
         block scripts-config
             script.
                 /* изменяемые настройки скриптов, указаны значения по умолчанию */

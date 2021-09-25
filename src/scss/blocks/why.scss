@@ -1,0 +1,57 @@
+.why {
+    padding: 105px 0 60px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 270px 0 95px;
+    }
+
+    &__list {
+        margin-top: 40px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 80px;
+            display: flex;
+            gap: 40px;
+        }
+    }
+
+    &__item {
+        padding: 30px 25px;
+        background: fade-out($color-secondary, .9);
+        border-radius: 10px;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            flex: 0 1 320px;
+            padding: 30px;
+        }
+    }
+
+    &__text {
+        margin-top: 24px;
+        line-height: 150%;
+        font-weight: 350;
+        font-size: 16px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+        }
+    }
+
+    &__image {
+        display: block;
+        border-radius: 20px;
+        margin-top: 40px;
+
+        img {
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+
+            max-width: 100%;
+        }
+    }
+}

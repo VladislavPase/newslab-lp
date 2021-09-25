@@ -1,0 +1,139 @@
+.extra {
+    padding: 40px 0 100px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 100px 0 230px;
+        background-color: $color-white;
+    }
+
+    &__info {
+        margin-top: 40px;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            margin-top: 70px;
+        }
+
+        .textbox {
+            flex: 0 1 625px;
+        }
+
+        &--image {
+            @include media-breakpoint-down(md) {
+                margin-top: 60px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-left: 100px;
+            }
+
+            &_lg {
+                @include media-breakpoint-down(md) {
+                    width: 100vw;
+                    left: 10vw;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                @include media-breakpoint-up(lg) {
+                    position: absolute;
+                    left: 150px;
+                    top: -100px;
+                }
+            }
+
+            &_sm {
+
+                @include media-breakpoint-down(md) {
+                    width: 30vw;
+                    position: absolute;
+                    bottom: -20px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                @include media-breakpoint-up(lg) {
+                    bottom: -100px;
+                }
+            }
+        }
+
+        &--profit {
+            margin-top: 40px;
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 70px;
+            }
+        }
+
+        &--percent {
+            display: flex;
+            align-items: flex-end;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            margin-top: 20px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 24px;
+            }
+
+            .value {
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 100%;
+                color: $color-secondary;
+                margin: 0 10px;
+
+                @include media-breakpoint-up(lg) {
+                    margin: 0 20px;
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 350;
+        font-size: 16px;
+        line-height: 150%;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+        }
+
+        &._arrow {
+            margin-top: 60px;
+            max-width: 260px;
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 100px;
+                max-width: 445px;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        transform: rotate(90deg) scale(1, -1);
+        left: 100%;
+        bottom: 70%;
+
+        @include media-breakpoint-up(lg) {
+            bottom: calc(100% + 10px);
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+        padding: 13px 48px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 70px;
+        }
+    }
+}

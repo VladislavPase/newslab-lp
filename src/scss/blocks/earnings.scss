@@ -1,0 +1,134 @@
+.earnings {
+    padding: 60px 0 40px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 130px 0 120px;
+    }
+
+    &__cards {
+        margin-top: 25px;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            margin-top: 145px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+
+        &--num {
+            font-weight: bold;
+            font-size: 120px;
+            line-height: 150%;
+            color: $color-secondary;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 240px;
+            }
+
+            .curr {
+                font-size: 60px;
+                line-height: 150%;
+                margin-left: 10px;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 120px;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        &--text {
+            font-size: 18px;
+            line-height: 150%;
+            margin-top: 60px;
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 90px;
+                font-size: 28px;
+            }
+        }
+
+        &--icon {
+            bottom: -30px;
+
+            @include media-breakpoint-down(md) {
+                height: 60px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                bottom: -70px;
+            }
+
+            img {
+                @include media-breakpoint-down(md) {
+                    height: 100%;
+                }
+            }
+        }
+
+        &--arrow {
+            position: absolute;
+            left: calc(100% + 45px);
+            top: 100px;
+            transform: rotate(165deg);
+        }
+
+        &.click {
+            @include media-breakpoint-up(lg) {
+                flex: 0 1 500px;
+            }
+
+            .earnings__card--text {
+                margin-left: 25px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-left: 50px;
+                }
+            }
+        }
+
+        &.sum {
+            background: fade-out($color-primary, 0.95);
+            border: 2px solid $color-primary;
+            border-radius: 10px;
+            justify-content: center;
+            padding: 20px;
+
+            @include media-breakpoint-up(lg) {
+                flex: 1;
+                margin-left: 215px;
+                border-radius: 20px;
+            }
+
+            .earnings__card--text {
+                max-width: 165px;
+
+                @include media-breakpoint-down(md) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        margin: 40px 0 0;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 510px;
+            margin: 70px auto 0;
+            font-size: 24px;
+        }
+
+        .link {
+            &::before {
+                background: $color-base;
+            }
+        }
+    }
+}

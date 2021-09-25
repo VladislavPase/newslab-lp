@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'lazysizes';
-// import Swiper from 'swiper/bundle';
+import Swiper from 'swiper/bundle';
 
 import page from 'page';
 import forms from 'forms';
@@ -50,6 +50,9 @@ let app = {
 
         app.document.ready(() => {
             this.initScrollTo(); // for example
+            this.initHeader();
+            this.initSlider();
+            this.initMenu();
         });
 
         // app.window.on('load', () => {
@@ -61,15 +64,18 @@ let app = {
     },
 
     initScrollTo() {
-        app.document.on('click', '.js-scrollto', function () {
-            let target = $(this).data('href');
+        document.querySelectorAll('[data-scroll]').forEach(el => {
+            let target = document.querySelector(el.dataset.scroll);
             if (target) {
-                let $target = $(target);
-                if ($target.length) {
-                    $('html, body').animate({
-                        scrollTop: $target.offset().top - app.scrollToOffset
-                    }, app.scrollToSpeed);
-                }
+                el.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // target.scrollIntoView({
+                    //     behavior: 'smooth',
+                    // });
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - app.scrollToOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    app.body.removeClass('menu-open');
+                });
             }
         });
     },
@@ -170,6 +176,63 @@ let app = {
 
     getKeyByValue(object, value) {
         return Object.keys(object).find(key => object[key] === value);
+    },
+
+    initHeader() {
+        let header = $('.header');
+
+        if (header.offset().top > 50) {
+            $('body').addClass('header-scrolling');
+        } else {
+            $('body').removeClass('header-scrolling');
+        }
+
+        $(window).on('scroll', function () {
+            if (header.offset().top > 50) {
+                $('body').addClass('header-scrolling');
+            } else {
+                $('body').removeClass('header-scrolling');
+            }
+        });
+    },
+
+    initSlider() {
+        new Swiper('.statistics__slider', {
+           slidesPerView: 'auto',
+           loop: true,
+           autoplay: {
+               delay: 2500
+           },
+           breakpoints: {
+               0: {
+                   spaceBetween: 60,
+               },
+               1280: {
+                   spaceBetween: 100,
+               }
+           }
+        });
+
+        new Swiper('.reviews__slider', {
+            slidesPerView: 'auto',
+            watchOverflow: true,
+            spaceBetween: 250,
+            centeredSlides: true,
+            navigation: {
+                nextEl: '.reviews__slider .next',
+                prevEl: '.reviews__slider .prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    },
+
+    initMenu() {
+        $(document).on('click', '.header__burger', function () {
+            $('body').toggleClass('menu-open');
+        });
     }
 
 };

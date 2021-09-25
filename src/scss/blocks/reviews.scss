@@ -1,0 +1,139 @@
+.reviews {
+    padding: 60px 0 100px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 130px 0 180px;
+    }
+
+    &__slider {
+        margin-top: 40px;
+        overflow: hidden;
+        padding-bottom: 70px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 85px;
+            padding-bottom: 50px;
+        }
+
+        &--title {
+            text-align: center;
+            font-size: 18px;
+            line-height: 150%;
+            margin-bottom: 25px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 24px;
+            }
+        }
+
+        &--item {
+            background: $color-white;
+            border-radius: 10px;
+            padding: 30px 25px;
+
+            @include media-breakpoint-up(lg) {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 70px;
+                border-radius: 20px;
+            }
+        }
+
+        &--image {
+            margin-bottom: 30px;
+
+            @include media-breakpoint-down(md) {
+                width: 80px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &--text {
+            font-weight: 350;
+            font-size: 16px;
+            line-height: 150%;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+        }
+
+        .prev, .next {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: $color-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            cursor: pointer;
+            color: $color-primary;
+            border: 1px solid transparent;
+            z-index: 5;
+            transition: border-color .2s ease;
+
+            @include media-breakpoint-down(md) {
+                bottom: 0;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 70px;
+                height: 70px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &.swiper-button-disabled {
+                pointer-events: none;
+                opacity: .7;
+            }
+
+            &.swiper-button-lock {
+                display: none;
+            }
+
+            i {
+                pointer-events: none;
+                font-size: 20px;
+            }
+
+            &:hover {
+                border-color: $color-primary;
+            }
+        }
+
+        .prev {
+            left: 0;
+            i {
+                transform: rotate(180deg);
+            }
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .swiper-pagination-bullets {
+            bottom: 15px;
+            width: max-content;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include media-breakpoint-up(lg) {
+                bottom: 0;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $color-primary;
+        }
+    }
+}

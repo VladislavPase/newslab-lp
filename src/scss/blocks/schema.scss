@@ -1,0 +1,102 @@
+.schema {
+    background: $color-secondary;
+    padding: 40px 0 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 110px 0 0;
+    }
+
+    &__title {
+        color: $color-white;
+    }
+
+    &__list {
+        margin-top: 40px;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 70px;
+        }
+
+        &--item {
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 30px;
+                display: flex;
+                gap: 25px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                flex: 0 1 300px;
+                margin-right: 140px;
+                margin-bottom: 45px;
+            }
+        }
+
+        &--num {
+            color: $color-white;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.05em;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 30px;
+                font-size: 24px;
+            }
+        }
+
+        &--text {
+            color: $color-white;
+            font-size: 16px;
+            font-weight: 350;
+            line-height: 150%;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+        }
+
+        &--image {
+            display: block;
+
+            @include media-breakpoint-down(md) {
+                margin-left: 80px;
+                margin-top: 40px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 60px;
+            }
+        }
+
+        &--arrow {
+            position: absolute;
+
+            @include media-breakpoint-down(md) {
+                left: 0;
+                top: 0;
+                transform: rotate(60deg);
+            }
+
+            @include media-breakpoint-up(lg) {
+                right: calc(100% + 60px);
+                bottom: 0;
+            }
+        }
+    }
+
+    &__image {
+        display: block;
+        bottom: -40px;
+
+        @include media-breakpoint-up(lg) {
+            bottom: -140px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

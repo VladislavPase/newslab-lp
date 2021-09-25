@@ -1,0 +1,30 @@
+.test {
+    padding: 80px 0;
+    background-color: $color-white;
+
+    @include media-breakpoint-up(lg) {
+        padding: 100px 0;
+    }
+
+    &__title {
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 40px auto 0;
+        padding: 18px 50px;
+        max-width: 250px;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 290px;
+            padding: 25px 60px;
+            margin: 100px auto 0;
+        }
+    }
+}
