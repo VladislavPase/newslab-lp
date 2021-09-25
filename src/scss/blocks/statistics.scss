@@ -47,20 +47,32 @@
     &__slider {
         margin-top: 80px;
 
+        .swiper-pagination-bullet-active {
+            background: $color-secondary;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: 40px;
+        }
+
         @include media-breakpoint-up(lg) {
             margin-top: 100px;
+
+            .swiper-pagination {
+                display: none;
+            }
         }
 
         &--item {
             display: flex;
-            align-items: center;
 
             @include media-breakpoint-down(md) {
-                width: max-content;
+                flex-direction: column;
             }
 
             @include media-breakpoint-up(lg) {
                 max-width: max-content;
+                align-items: center;
             }
 
             .value {
@@ -79,6 +91,10 @@
                 font-weight: 350;
                 font-size: 16px;
                 line-height: 150%;
+
+                @include media-breakpoint-down(md) {
+                    margin-top: 5px;
+                }
 
                 @include media-breakpoint-up(lg) {
                     font-size: 18px;

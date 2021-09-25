@@ -1856,9 +1856,12 @@ body.menu-open .header__nav {
   margin-top: 80px;
 }
 
+.statistics__slider .swiper-pagination-bullet-active {
+  background: #6BBEA0;
+}
+
 .statistics__slider--item {
   display: flex;
-  align-items: center;
 }
 
 .statistics__slider--item .value {
@@ -3218,8 +3221,13 @@ body.menu-open .header__nav {
     margin-top: 100px;
   }
 
+  .statistics__slider .swiper-pagination {
+    display: none;
+  }
+
   .statistics__slider--item {
     max-width: max-content;
+    align-items: center;
   }
 
   .statistics__slider--item .value {
@@ -3767,8 +3775,16 @@ body.menu-open .header__nav {
     margin-top: 30px;
   }
 
+  .statistics__slider {
+    padding-bottom: 40px;
+  }
+
   .statistics__slider--item {
-    width: max-content;
+    flex-direction: column;
+  }
+
+  .statistics__slider--item .text {
+    margin-top: 5px;
   }
 
   .reviews__slider--image {

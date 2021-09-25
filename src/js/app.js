@@ -200,6 +200,10 @@ let app = {
         new Swiper('.statistics__slider', {
            slidesPerView: 'auto',
            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
            autoplay: {
                delay: 2500
            },
