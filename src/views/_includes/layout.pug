@@ -10,7 +10,11 @@ html(lang=__.lang, class="no-js")
         include mixins/svgsprite
         
         block header
-            include blocks/header
+            
+            if (pageName !== 'index')
+                include blocks/header-not-main
+            else
+                include blocks/header
         
         .content
             block content

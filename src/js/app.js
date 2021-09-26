@@ -53,6 +53,7 @@ let app = {
             this.initHeader();
             this.initSlider();
             this.initMenu();
+            this.initInputs();
         });
 
         // app.window.on('load', () => {
@@ -236,6 +237,22 @@ let app = {
     initMenu() {
         $(document).on('click', '.header__burger', function () {
             $('body').toggleClass('menu-open');
+        });
+    },
+
+    initInputs() {
+        let input = $('.input');
+
+        input.focus(function () {
+            $(this).removeClass('_is-empty');
+            $(this).removeClass('_filled');
+        });
+
+        input.blur(function () {
+            if ($(this).val()) {
+                $(this).addClass('_filled');
+                $(this).removeClass('_is-empty');
+            }
         });
     }
 

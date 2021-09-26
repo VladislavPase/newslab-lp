@@ -1,0 +1,96 @@
+.faqs {
+    padding: 160px 0 80px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 180px 0 160px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        margin-top: 40px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 80px;
+            gap: 40px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        display: block;
+        padding: 30px 25px;
+        background: $color-white;
+        border-radius: 10px;
+        border: 1px solid transparent;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 40px;
+            display: flex;
+            flex: 1 1 48%;
+            max-width: 50%;
+        }
+
+        &:hover {
+            border-color: fade-out($color-primary, .85);
+        }
+    }
+
+    &__form {
+        @include media-breakpoint-up(lg) {
+            max-width: 900px;
+        }
+    }
+
+    .faq {
+        &__textbox {
+            @include media-breakpoint-down(md) {
+                margin-top: 20px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-left: 40px;
+            }
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            margin-bottom: 20px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 20px;
+            }
+        }
+
+        &__text {
+            font-weight: 350;
+            font-size: 16px;
+            line-height: 150%;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+        }
+
+        &__bottom {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0.5;
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 40px;
+            }
+        }
+    }
+}

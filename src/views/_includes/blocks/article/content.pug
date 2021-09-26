@@ -1,0 +1,29 @@
+section.article
+    .container
+        form.faqs__form
+            .fieldset.input-search
+                img.icon(src="assets/img/icons/search.svg" alt="")
+                input.input.faq__input._is-empty(name="faq_name" placeholder="Поиск ответов")
+        .breadcrumbs
+            a.link.text-uppercase(href="faq.html") FAQ
+            .decimal
+                i.icon-more.icon
+            span Как выбрать новость или статью на смарт-витрине?
+        .article__header
+            h1.article__title Как выбрать новость или статью на смарт-витрине?
+            .article__info
+                span.article__author Автор: News-lab
+                span.article__date 21.09.2021
+        .article__content
+            p.article__text Для выбора статьи или новости необходимо зайти в раздел «Статьи» в личном кабинете.
+            picture.article__image
+                source(srcset="assets/img/admin__image.webp" type="image/webp")
+                source(srcset="assets/img/admin__image.png" type="image/png")
+                img(src="assets/img/admin__image.png" alt="")
+            p.article__text С помощью фильтров есть возможность выбрать: категорию, язык, страну и автора. Важно помнить, что фильтр по странам показывает страну, для которой данная новость или статья является релевантной. Например, напротив новости про пенсии в Узбекистане, в фильтре будет стоять флаг Узбекистана.
+            .article__list_wrapper
+                p.article__list--title Вот несколько общих правил для выбора статьи или новости:
+                ul.article__list
+                    li.article__list--item Новость должна «цеплять» возрастную аудиторию. Напомним, что ключевая аудитория - это пользователи от 45 лет
+                    li.article__list--item Убедитесь, что в выбранной новости актуальные даты. Пользователя ничего не должно пугать и отталкивать. Новость может быть не только информационной, но и просто необычной, цепляющей
+                    li.article__list--item Перед тем как заливать трафик на новость, откройте её с мобильного устройства. Убедитесь, что заголовок, текст и изображение смотрятся хорошо и привлекательно

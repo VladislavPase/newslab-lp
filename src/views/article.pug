@@ -1,0 +1,10 @@
+extends _includes/layout
+
+block config
+    - var pagetitle = 'Article'
+    - var pageName = 'article'
+    - var bodyClass = 'content-page'
+
+block content
+    include _includes/blocks/article/content
+    include _includes/blocks/main/pre-footer

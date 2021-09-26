@@ -168,6 +168,23 @@
         font-size: 16px;
         line-height: 19px;
 
+        .icon {
+            margin-right: 10px;
+            display: inline-block;
+            margin-bottom: -3px;
+
+            width: 18px;
+            height: 18px;
+
+            @include media-breakpoint-down(md) {
+                fill: $color-white;
+
+                svg, path {
+                    fill: $color-white;
+                }
+            }
+        }
+
         @include media-breakpoint-down(md) {
             color: $color-white;
             display: block;
@@ -191,8 +208,8 @@
 
     &__actions {
         @include media-breakpoint-down(md) {
-            margin-top: auto;
             display: flex;
+            margin-top: auto;
             align-items: center;
             justify-content: center;
         }
@@ -214,5 +231,11 @@
         @include media-breakpoint-up(lg) {
             display: none;
         }
+    }
+}
+
+.content-page .header__nav--list {
+    @include media-breakpoint-up(lg) {
+        margin-left: 135px;
     }
 }

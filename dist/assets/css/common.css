@@ -911,14 +911,13 @@ button.swiper-pagination-bullet {
 .link {
   cursor: pointer;
   color: #000;
-  padding-bottom: 3px;
 }
 
 .link::before {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -3px;
   width: 100%;
   height: 2px;
   transition: background-color .2s ease;
@@ -1256,6 +1255,14 @@ body.menu-open .header__nav {
   line-height: 19px;
 }
 
+.header__link .icon {
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: -3px;
+  width: 18px;
+  height: 18px;
+}
+
 .header__enter {
   flex: 0 0 36px;
   height: 36px;
@@ -1266,90 +1273,40 @@ body.menu-open .header__nav {
   justify-content: center;
 }
 
-.input input,
-.input textarea {
+.input {
+  display: block;
   width: 100%;
-  color: #000;
-  line-height: 1.2;
-  height: 3rem;
-  padding: 0 1rem;
-  transition-property: box-shadow;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(0, 0, 0, 0.5), inset -1px 0 0 rgba(0, 0, 0, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: 350;
+  border: 1px solid transparent;
+  transition: border-color .2s ease;
 }
 
-.input input:hover,
-.input textarea:hover {
-  box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(0, 0, 0, 0.7), inset -1px 0 0 rgba(0, 0, 0, 0.7), inset 0 -1px 0 rgba(0, 0, 0, 0.7);
+.input::placeholder {
+  opacity: .5;
 }
 
-.input input:focus,
-.input textarea:focus {
-  box-shadow: inset 1px 0 0 #000, inset 0 1px 0 #000, inset -1px 0 0 #000, inset 0 -1px 0 #000;
+.input:active,
+.input:focus {
+  border-color: #E94E1B;
 }
 
-.input input:disabled,
-.input textarea:disabled {
-  opacity: .7;
-  pointer-events: none;
+.input._filled {
+  border-color: #E94E1B;
 }
 
-.input input:required ~ label:after,
-.input textarea:required ~ label:after {
-  content: '*';
+.input-search .input {
+  padding-left: 60px;
 }
 
-.input._error input,
-.input._error textarea {
-  box-shadow: inset 1px 0 0 rgba(233, 78, 27, 0.5), inset 0 1px 0 rgba(233, 78, 27, 0.5), inset -1px 0 0 rgba(233, 78, 27, 0.5), inset 0 -1px 0 rgba(233, 78, 27, 0.5);
-}
-
-.input._error input:hover,
-.input._error textarea:hover {
-  box-shadow: inset 1px 0 0 rgba(233, 78, 27, 0.7), inset 0 1px 0 rgba(233, 78, 27, 0.7), inset -1px 0 0 rgba(233, 78, 27, 0.7), inset 0 -1px 0 rgba(233, 78, 27, 0.7);
-}
-
-.input._error input:focus,
-.input._error textarea:focus {
-  box-shadow: inset 1px 0 0 #E94E1B, inset 0 1px 0 #E94E1B, inset -1px 0 0 #E94E1B, inset 0 -1px 0 #E94E1B;
-}
-
-.input label {
+.input-search .icon {
   position: absolute;
-  font-size: 1rem;
-  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
-  color: rgba(0, 0, 0, 0.6);
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-}
-
-.input label._label-empty {
-  font-size: 1rem !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-}
-
-.input input:focus + label,
-.input input:valid + label,
-.input input:disabled + label,
-.input textarea:focus + label,
-.input textarea:valid + label,
-.input select:focus ~ label,
-.input select:valid + label {
-  font-size: 60%;
-  top: 3px;
-  transform: none;
-}
-
-.input input:focus + ._label-empty,
-.input textarea:focus + ._label-empty {
-  font-size: 60% !important;
-  top: 3px !important;
+  left: 20px;
+  z-index: 2;
 }
 
 .menu-toggler .menu-toggler__hamb {
@@ -1471,6 +1428,25 @@ body.menu-open .header__nav {
 .rte ol li:before {
   counter-increment: myCounter;
   content: counter(myCounter) ".";
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.breadcrumbs .decimal {
+  margin: 0 10px;
+}
+
+.breadcrumbs .decimal .icon::before {
+  transform: rotate(-90deg);
+  margin: 0;
+}
+
+.breadcrumbs span {
+  opacity: 0.7;
 }
 
 .section__title {
@@ -2002,6 +1978,120 @@ body.menu-open .header__nav {
   padding: 18px 50px;
   margin: 60px auto 0;
   max-width: 250px;
+}
+
+.faqs {
+  padding: 160px 0 80px;
+}
+
+.faqs__title {
+  margin-bottom: 40px;
+}
+
+.faqs__list {
+  margin-top: 40px;
+}
+
+.faqs__item {
+  display: block;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.faqs__item:hover {
+  border-color: rgba(233, 78, 27, 0.15);
+}
+
+.faqs .faq__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+
+.faqs .faq__text {
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.faqs .faq__bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+
+.article {
+  padding: 90px 0 80px;
+}
+
+.article__header {
+  margin-top: 40px;
+}
+
+.article__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.article__info {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  font-size: 14px;
+  line-height: 16px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.article__content {
+  margin-top: 40px;
+}
+
+.article__text {
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.article__text + .article__text {
+  margin-top: 10px;
+}
+
+.article__image {
+  display: block;
+  margin: 20px 0;
+}
+
+.article__image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.article__list {
+  list-style: inherit;
+  padding-left: 20px;
+}
+
+.article__list_wrapper {
+  margin-top: 40px;
+}
+
+.article__list--title {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.article__list--item {
+  margin-top: 10px;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 @media (min-width: 320px) {
@@ -2565,13 +2655,13 @@ body.menu-open .header__nav {
 @media (min-width: 1280px) {
   .container,
   .header__inner {
-    max-width: 1170px;
+    max-width: 1400px;
   }
 
   .container,
   .header__inner {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .row {
@@ -2915,6 +3005,14 @@ body.menu-open .header__nav {
 
   .header__enter {
     display: none;
+  }
+
+  .content-page .header__nav--list {
+    margin-left: 135px;
+  }
+
+  .breadcrumbs {
+    margin-top: 80px;
   }
 
   .section__title {
@@ -3300,6 +3398,91 @@ body.menu-open .header__nav {
     max-width: 290px;
     padding: 24px 60px;
   }
+
+  .faqs {
+    padding: 180px 0 160px;
+  }
+
+  .faqs__list {
+    margin-top: 80px;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .faqs__item {
+    padding: 40px;
+    display: flex;
+    flex: 1 1 48%;
+    max-width: 50%;
+  }
+
+  .faqs__form {
+    max-width: 900px;
+  }
+
+  .faqs .faq__textbox {
+    margin-left: 40px;
+  }
+
+  .faqs .faq__title {
+    font-size: 20px;
+  }
+
+  .faqs .faq__text {
+    font-size: 18px;
+  }
+
+  .faqs .faq__bottom {
+    margin-top: 40px;
+  }
+
+  .article {
+    padding: 140px 0 160px;
+  }
+
+  .article__title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+
+  .article__info {
+    font-size: 16px;
+    line-height: 19px;
+    justify-content: flex-start;
+    gap: 80px;
+    margin-top: 30px;
+  }
+
+  .article__content {
+    margin-top: 80px;
+    max-width: 980px;
+  }
+
+  .article__text + .article__text {
+    margin-top: 20px;
+  }
+
+  .article__text {
+    font-size: 18px;
+  }
+
+  .article__image {
+    margin: 40px 0;
+  }
+
+  .article__list_wrapper {
+    margin-top: 80px;
+  }
+
+  .article__list--title {
+    font-size: 24px;
+  }
+
+  .article__list--item {
+    margin-top: 20px;
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1280px) and (hover), (min-width: 1280px) and (min-width: 0\0), (min-width: 1280px) and (min--moz-device-pixel-ratio: 0) {
@@ -3650,6 +3833,15 @@ body.menu-open .header__nav {
     top: -5px;
   }
 
+  .header__link .icon {
+    fill: #fff;
+  }
+
+  .header__link .icon svg,
+  .header__link .icon path {
+    fill: #fff;
+  }
+
   .header__link {
     color: #fff;
     display: block;
@@ -3667,8 +3859,8 @@ body.menu-open .header__nav {
   }
 
   .header__actions {
-    margin-top: auto;
     display: flex;
+    margin-top: auto;
     align-items: center;
     justify-content: center;
   }
@@ -3811,6 +4003,14 @@ body.menu-open .header__nav {
   .pre-footer__text {
     max-width: 230px;
   }
+
+  .faqs__item {
+    margin-bottom: 20px;
+  }
+
+  .faqs .faq__textbox {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -3843,8 +4043,8 @@ body.menu-open .header__nav {
 
 @media (min-width: 1280px) and (max-width: 1919.98px) {
   .lg-full {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: -50px;
+    margin-left: -50px;
   }
 }
 /*# sourceMappingURL=maps/common.css.map */

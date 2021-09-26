@@ -69,12 +69,11 @@
 .link {
     cursor: pointer;
     color: $link-color;
-    padding-bottom: 3px;
     &::before {
         content: '';
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: -3px;
         width: 100%;
         height: 2px;
         transition: background-color .2s ease;

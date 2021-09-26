@@ -1,0 +1,21 @@
+header.header
+    .header__inner
+        .header__burger
+            span
+            span
+        a(href="/").header__logo.logo
+            img(src="assets/img/logo.svg" alt="")
+        nav.header__nav
+            a(href="/").header__logo.logo
+                img(src="assets/img/logo-light.svg" alt="")
+            ul.header__nav--list
+                li.header__nav--item
+                    a(href="./").header__nav--link.link.header__link
+                        svg.icon(role="img")
+                            use(xlink:href="assets/img/icons/external_link.svg#link")
+                        | Перейти на сайт News-lab
+            .header__actions
+                a(href="").header__link.link.header__actions--link Вход
+                a(href="").header__btn.btn._secondary Регистрация
+        .header__enter
+            img(src="assets/img/icons/exit.svg" alt="")

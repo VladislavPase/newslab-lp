@@ -1,0 +1,20 @@
+section.faqs
+    .container
+        h1.section__title.text-uppercase.faqs__title справочный центр
+        form.faqs__form
+            .fieldset.input-search
+                img.icon(src="assets/img/icons/search.svg" alt="")
+                input.input.faq__input._is-empty(name="faq_name" placeholder="Поиск ответов")
+        .faqs__list
+            - var i = 0
+            while i < 12
+                a(href="article.html" target="_blank").faqs__item.faq
+                    .faq__icon
+                        img(src="assets/img/icons/circle.svg")
+                    .faq__textbox
+                        h5.faq__title Выбор новости или статьи
+                        p.faq__text Как выбрать новость или статью для залива, как добавить свои новости и сделать их приватными
+                        .faq__bottom
+                            span.faq__author Автор: News-lab
+                            span.faq__date 21.09.2021
+                -i++
