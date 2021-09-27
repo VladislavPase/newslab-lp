@@ -4,6 +4,7 @@ import Swiper from 'swiper/bundle';
 
 import page from 'page';
 import forms from 'forms';
+import './anchor';
 
 let app = {
 
@@ -49,11 +50,14 @@ let app = {
         window.app = app;
 
         app.document.ready(() => {
-            this.initScrollTo(); // for example
             this.initHeader();
             this.initSlider();
             this.initMenu();
             this.initInputs();
+        });
+
+        window.addEventListener('load', () => {
+            this.initScrollTo(); // for example
         });
 
         // app.window.on('load', () => {
@@ -65,20 +69,18 @@ let app = {
     },
 
     initScrollTo() {
-        document.querySelectorAll('[data-scroll]').forEach(el => {
-            let target = document.querySelector(el.dataset.scroll);
-            if (target) {
-                el.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    // target.scrollIntoView({
-                    //     behavior: 'smooth',
-                    // });
-                    const y = target.getBoundingClientRect().top + window.pageYOffset - app.scrollToOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                    app.body.removeClass('menu-open');
-                });
-            }
-        });
+        // document.querySelectorAll('[data-scroll]').forEach(el => {
+        //     let target = document.querySelector(el.dataset.scroll);
+        //     if (target) {
+        //         let paddingTop = parseInt(getComputedStyle(target).paddingTop);
+        //         el.addEventListener('click', (e) => {
+        //             e.preventDefault();
+        //             const y = target.getBoundingClientRect().top + window.pageYOffset + 100 - paddingTop;
+        //             window.scrollTo({ top: y, behavior: 'smooth' });
+        //             app.body.removeClass('menu-open');
+        //         });
+        //     }
+        // });
     },
 
     formatPrice(price) {

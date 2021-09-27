@@ -1,12 +1,9 @@
 .statistics {
     padding: 60px 0 80px;
-
-    @include media-breakpoint-down(md) {
-        background: $color-white;
-    }
+    background: $color-white;
 
     @include media-breakpoint-up(lg) {
-        padding: 180px 0 100px;
+        padding: 115px 0 110px;
     }
 
     &__title {
@@ -57,10 +54,11 @@
 
         @include media-breakpoint-up(lg) {
             margin-top: 100px;
+            padding-bottom: 50px;
 
-            .swiper-pagination {
-                display: none;
-            }
+            //.swiper-pagination {
+            //    display: none;
+            //}
         }
 
         &--item {

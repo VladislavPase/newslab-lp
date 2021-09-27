@@ -28,8 +28,8 @@
             }
 
             @include media-breakpoint-up(lg) {
-                flex: 0 1 300px;
-                margin-right: 140px;
+                flex: 0 0 33.33%;
+                padding-right: 135px;
                 margin-bottom: 45px;
             }
         }

@@ -55,6 +55,14 @@
                     flex: 0 0 245px;
                 }
             }
+
+            .icon {
+                height: 20px;
+
+                img {
+                    height: 100%;
+                }
+            }
         }
 
         &--title {

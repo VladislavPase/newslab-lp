@@ -1495,6 +1495,14 @@ body.menu-open .header__nav {
   margin-top: 30px;
 }
 
+.intro__list--item .icon {
+  height: 20px;
+}
+
+.intro__list--item .icon img {
+  height: 100%;
+}
+
 .intro__list--title {
   font-weight: 500;
   font-size: 16px;
@@ -1812,6 +1820,7 @@ body.menu-open .header__nav {
 
 .statistics {
   padding: 60px 0 80px;
+  background: #fff;
 }
 
 .statistics__list {
@@ -1992,16 +2001,28 @@ body.menu-open .header__nav {
   margin-top: 40px;
 }
 
+.faqs a.faqs__item {
+  border: 2px solid transparent;
+}
+
+.faqs a.faqs__item:hover {
+  border-color: rgba(233, 78, 27, 0.15);
+}
+
 .faqs__item {
   display: block;
   padding: 30px 25px;
   background: #fff;
   border-radius: 10px;
-  border: 1px solid transparent;
 }
 
-.faqs__item:hover {
-  border-color: rgba(233, 78, 27, 0.15);
+.faqs .faq__textbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqs .faq__textbox a {
+  color: #E94E1B;
 }
 
 .faqs .faq__title {
@@ -2015,14 +2036,25 @@ body.menu-open .header__nav {
   font-weight: 350;
   font-size: 16px;
   line-height: 150%;
+  margin-bottom: 30px;
 }
 
 .faqs .faq__bottom {
-  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   opacity: 0.5;
+  margin-top: auto;
+}
+
+.faqs .faq ol {
+  list-style: decimal;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.faqs .faq ol li + li {
+  margin-top: 10px;
 }
 
 .article {
@@ -3138,8 +3170,8 @@ body.menu-open .header__nav {
   }
 
   .schema__list--item {
-    flex: 0 1 300px;
-    margin-right: 140px;
+    flex: 0 0 33.33%;
+    padding-right: 135px;
     margin-bottom: 45px;
   }
 
@@ -3205,7 +3237,7 @@ body.menu-open .header__nav {
 
   .earnings__cards {
     display: flex;
-    margin-top: 145px;
+    margin-top: 120px;
   }
 
   .earnings__card--num {
@@ -3248,7 +3280,6 @@ body.menu-open .header__nav {
 
   .extra {
     padding: 100px 0 230px;
-    background-color: #fff;
   }
 
   .extra__info {
@@ -3301,7 +3332,7 @@ body.menu-open .header__nav {
   }
 
   .statistics {
-    padding: 180px 0 100px;
+    padding: 115px 0 110px;
   }
 
   .statistics__title-wrapper {
@@ -3317,10 +3348,7 @@ body.menu-open .header__nav {
 
   .statistics__slider {
     margin-top: 100px;
-  }
-
-  .statistics__slider .swiper-pagination {
-    display: none;
+    padding-bottom: 50px;
   }
 
   .statistics__slider--item {
@@ -3431,10 +3459,11 @@ body.menu-open .header__nav {
 
   .faqs .faq__text {
     font-size: 18px;
+    margin-bottom: 40px;
   }
 
-  .faqs .faq__bottom {
-    margin-top: 40px;
+  .faqs .faq ol {
+    margin-bottom: 40px;
   }
 
   .article {
@@ -3955,10 +3984,6 @@ body.menu-open .header__nav {
 
   .extra__info--image_sm img {
     max-width: 100%;
-  }
-
-  .statistics {
-    background: #fff;
   }
 
   .statistics__list {
