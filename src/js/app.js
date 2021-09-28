@@ -55,72 +55,6 @@ let app = {
             this.initMenu();
             this.initInputs();
         });
-
-        window.addEventListener('load', () => {
-            this.initScrollTo(); // for example
-        });
-
-        // app.window.on('load', () => {
-        // });
-
-        // this.document.on(app.resizeEventName, () => {
-        // });
-
-    },
-
-    initScrollTo() {
-        // document.querySelectorAll('[data-scroll]').forEach(el => {
-        //     let target = document.querySelector(el.dataset.scroll);
-        //     if (target) {
-        //         let paddingTop = parseInt(getComputedStyle(target).paddingTop);
-        //         el.addEventListener('click', (e) => {
-        //             e.preventDefault();
-        //             const y = target.getBoundingClientRect().top + window.pageYOffset + 100 - paddingTop;
-        //             window.scrollTo({ top: y, behavior: 'smooth' });
-        //             app.body.removeClass('menu-open');
-        //         });
-        //     }
-        // });
-    },
-
-    formatPrice(price) {
-        return this.formatNumber(price, 0, ',', ' ');
-    },
-
-    formatNumber(number, decimals, dec_point, thousands_sep) {
-        // original by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
-        // improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-        // bugfix by: Michael White (http://crestidg.com)
-        let i, j, kw, kd, km;
-
-        // input sanitation & defaults
-        if (isNaN(decimals = Math.abs(decimals))) {
-            decimals = 2;
-        }
-        if (dec_point == undefined) {
-            dec_point = ',';
-        }
-        if (thousands_sep == undefined) {
-            thousands_sep = '.';
-        }
-
-        i = parseInt(number = (+number || 0).toFixed(decimals)) + '';
-
-        if ((j = i.length) > 3) {
-            j = j % 3;
-        } else {
-            j = 0;
-        }
-
-        km = j
-                ? i.substr(0, j) + thousands_sep
-                : '';
-        kw = i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + thousands_sep);
-        kd = (decimals
-                ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, '0').slice(2)
-                : '');
-
-        return km + kw + kd;
     },
 
     /**
@@ -142,43 +76,6 @@ let app = {
 
     uniqID() {
         return `app_id_${app.currentID++}`;
-    },
-
-    /**
-     * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
-     * param  iNumber Integer Число на основе которого нужно сформировать окончание
-     * param  aEndings Array Массив слов или окончаний для чисел (1, 4, 5),
-     *         например ['яблоко', 'яблока', 'яблок']
-     * return String
-     *
-     * https://habrahabr.ru/post/105428/
-     */
-    getNumEnding(iNumber, aEndings) {
-        let sEnding, i;
-        iNumber = iNumber % 100;
-        if (iNumber >= 11 && iNumber <= 19) {
-            sEnding = aEndings[2];
-        } else {
-            i = iNumber % 10;
-            switch (i)
-            {
-                case (1):
-                    sEnding = aEndings[0];
-                    break;
-                case (2):
-                case (3):
-                case (4):
-                    sEnding = aEndings[1];
-                    break;
-                default:
-                    sEnding = aEndings[2];
-            }
-        }
-        return sEnding;
-    },
-
-    getKeyByValue(object, value) {
-        return Object.keys(object).find(key => object[key] === value);
     },
 
     initHeader() {

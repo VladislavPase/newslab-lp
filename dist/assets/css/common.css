@@ -2025,6 +2025,14 @@ body.menu-open .header__nav {
   color: #E94E1B;
 }
 
+.faqs .faq__icon .circle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #6BBEA0;
+  border-radius: 50%;
+}
+
 .faqs .faq__title {
   font-weight: 500;
   font-size: 18px;

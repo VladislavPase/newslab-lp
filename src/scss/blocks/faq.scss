@@ -70,6 +70,16 @@
             }
         }
 
+        &__icon {
+            .circle {
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-color: $color-secondary;
+                border-radius: 50%;
+            }
+        }
+
         &__title {
             font-weight: 500;
             font-size: 18px;
@@ -114,6 +124,7 @@
                 margin-bottom: 40px;
             }
         }
+
 
     }
 }
