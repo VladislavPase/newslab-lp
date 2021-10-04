@@ -28,7 +28,7 @@
         }
 
         @include media-breakpoint-up(lg) {
-            flex: 0 0 680px;
+            flex: 0 0 640px;
             font-size: 18px;
         }
 
@@ -68,8 +68,13 @@
                 flex-direction: column;
             }
 
+            @include media-breakpoint-up(md) {
+                flex: 0 0 50%;
+            }
+
             @include media-breakpoint-up(lg) {
                 max-width: max-content;
+                flex: none;
                 align-items: center;
             }
 
