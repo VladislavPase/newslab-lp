@@ -2692,7 +2692,7 @@ body.menu-open .header__nav {
   }
 
   .statistics__slider--item {
-    flex: 0 0 50%;
+    flex: 0 0 45%;
   }
 }
 
@@ -3364,8 +3364,7 @@ body.menu-open .header__nav {
   }
 
   .statistics__slider--item {
-    max-width: max-content;
-    flex: none;
+    flex: 1 0 33.33%;
     align-items: center;
   }
 
